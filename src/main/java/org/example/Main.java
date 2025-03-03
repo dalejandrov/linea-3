@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        final int COSTO_INTERNET = 700000;
-        final int COSTO_RADIO = 200000;
-        final int COSTO_TELEVISION = 600000;
+        final int costoInternet = 700000;
+        final int costoRadio = 200000;
+        final int costoTelevision = 600000;
 
         int[] votos = new int[3];
         int[] votosInternet = new int[3];
@@ -60,7 +60,7 @@ public class Main {
                     break;
                 case 2:
                     for (int i = 0; i < 3; i++) {
-                        int costo = (votosInternet[i] * COSTO_INTERNET) + (votosRadio[i] * COSTO_RADIO) + (votosTelevision[i] * COSTO_TELEVISION);
+                        int costo = (votosInternet[i] * costoInternet) + (votosRadio[i] * costoRadio) + (votosTelevision[i] * costoTelevision);
                         System.out.println("Costo de campaña del Candidato " + (i + 1) + ": $" + costo);
                     }
                     break;
@@ -90,7 +90,7 @@ public class Main {
                 case 6:
                     int totalCostos = 0, totalCandidatos = 0;
                     for (int i = 0; i < 3; i++) {
-                        int costo = (votosInternet[i] * COSTO_INTERNET) + (votosRadio[i] * COSTO_RADIO) + (votosTelevision[i] * COSTO_TELEVISION);
+                        int costo = (votosInternet[i] * costoInternet) + (votosRadio[i] * costoRadio) + (votosTelevision[i] * costoTelevision);
                         if (votos[i] > 0) {
                             totalCostos += costo;
                             totalCandidatos++;
